@@ -1,4 +1,4 @@
-/*
+
  * Coffee API Backend (Kotlin)
  *
  * A RESTful backend application built with Kotlin for managing coffee information.
@@ -22,4 +22,3 @@
  *  - POST /api/users - Registers a new user
  *  - POST /api/auth - Logs in a user and returns a JWT
  *
- */
