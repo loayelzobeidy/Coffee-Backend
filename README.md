@@ -16,15 +16,10 @@
  *  - JWT (JSON Web Tokens) for authentication
  *  - [Database used,PostgreSQL]
  *
- *  // Example Usage (replace with actual endpoint)
- *  // GET /coffees - Returns a list of coffee drinks
- *  // POST /coffees - Adds a new coffee drink (Admin only)
- *  // POST /api/users - Registers a new user
- *  // POST /api/auth - Logs in a user and returns a JWT
+ *  Example Usage (replace with actual endpoint)
+ *  - GET /coffees - Returns a list of coffee drinks
+ *  - POST /coffees - Adds a new coffee drink (Admin only)
+ *  - POST /api/users - Registers a new user
+ *  - POST /api/auth - Logs in a user and returns a JWT
  *
- *  // Contribution guidelines
- *  // [Link to Contribution Guidelines]
- *
- *  // License
- *  // [Specify License, e.g., MIT, Apache 2.0]
  */
