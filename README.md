@@ -1,4 +1,4 @@
-/**
+/*
  * Coffee API Backend (Kotlin)
  *
  * A RESTful backend application built with Kotlin for managing coffee information.
