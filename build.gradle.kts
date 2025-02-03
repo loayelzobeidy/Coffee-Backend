@@ -25,6 +25,9 @@ dependencies {
 	implementation("io.jsonwebtoken:jjwt-api:0.12.3")
 	implementation("io.jsonwebtoken:jjwt-impl:0.12.3")
 	implementation("io.jsonwebtoken:jjwt-jackson:0.12.3")
+//	implementation("org.mongodb:mongodb-driver-sync")
+//	implementation("org.mongodb:mongodb-driver-sync:4.11.1") // Or latest version
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	testImplementation("org.springframework.security:spring-security-test")
 	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
