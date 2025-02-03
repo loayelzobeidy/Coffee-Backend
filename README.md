@@ -3,6 +3,8 @@
  *
  * A RESTful backend application built with Kotlin for managing coffee information.
  * Features JWT authentication and role-based authorization (User/Admin).
+ * Having two databases on the same application postgresql managing the coffee drinks, food & menus(joins). and Mongodb responsible for documents coffeeshop with address object, reviews
+ * etc.
  *
  * Provides endpoints for:
  *  - Retrieving coffee drinks
@@ -14,7 +16,7 @@
  *  - Kotlin
  *  - [Spring Boot]
  *  - JWT (JSON Web Tokens) for authentication
- *  - [Database used,PostgreSQL]
+ *  - [Database used,PostgreSQL, MongoDB]
  *
  *  Example Usage (replace with actual endpoint)
  *  - GET /coffees - Returns a list of coffee drinks
