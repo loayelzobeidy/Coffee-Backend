@@ -12,7 +12,7 @@ import java.util.*
 
 @Entity
 @Table(name="users")
-data class User(
+class User(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -21,7 +21,7 @@ data class User(
     @Column
     val email: String,
     @Column
-    val password: String,
+    var password: String,
     @Column
     val role: Role,
 

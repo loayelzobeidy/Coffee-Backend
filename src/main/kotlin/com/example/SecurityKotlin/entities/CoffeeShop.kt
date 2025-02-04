@@ -18,33 +18,7 @@ data class CoffeeShop(
     val reviews: List<Review> = emptyList() // Initialize as empty list
 )
 
-data class Address(
-    val street: String,
-    val city: String,
-    val postalCode: String,
-    val country: String
-)
 
-data class Location(
-    val type: String = "Point", // GeoJSON Point type
-    val coordinates: List<Double> // [longitude, latitude]
-)
 
-data class OpeningHours(
-    val dayOfWeek: String, // e.g., "Monday", "Tuesday"
-    val openTime: LocalTime?,  // Use LocalTime for time
-    val closeTime: LocalTime?
-)
 
-data class Amenities(
-    val hasWifi: Boolean,
-    val hasOutdoorSeating: Boolean,
-    val hasParking: Boolean,
-    val servesFood: Boolean // Add other relevant amenities
-)
 
-data class Review(
-    val userId: String, // Or a User object if you have a User entity
-    val rating: Int, // 1-5 star rating
-    val comment: String?
-)

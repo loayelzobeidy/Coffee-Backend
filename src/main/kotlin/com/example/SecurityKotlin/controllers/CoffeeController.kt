@@ -12,11 +12,18 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.responses.ApiResponse
+import io.swagger.v3.oas.annotations.responses.ApiResponses
 
 @RestController
 @RequestMapping("/api/v1/coffees")
 class CoffeeController(@Autowired private val coffeeService: CoffeeService) {
-
+    @Operation(summary = "Get all coffee drinks", description ="get all the coffee drinks ")
+    @ApiResponses(value = [
+        ApiResponse(responseCode = "200", description = "Successful operation"),
+        ApiResponse(responseCode = "404", description = "User not found")
+    ])
     @GetMapping("/")
     fun  getCoffees():List<CoffeeDto>{
         return coffeeService.getCoffees();

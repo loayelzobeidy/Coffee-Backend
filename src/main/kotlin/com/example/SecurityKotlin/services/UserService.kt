@@ -12,8 +12,8 @@ import java.util.*
 
 @Service
 class UserService(
-    private val userRepository: UserRepository,
-    private val encoder: PasswordEncoder
+     val userRepository: UserRepository,
+     val encoder: PasswordEncoder
 ) {
 
     @Transactional
@@ -22,6 +22,7 @@ class UserService(
         val found = userRepository.findByEmail(user.email)
 
         return if (found == null) {
+            user.password = encoder.encode(user.password)
             userRepository.save(user)
             user
         } else null

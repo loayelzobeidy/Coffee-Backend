@@ -5,6 +5,10 @@ import com.example.SecurityKotlin.entities.User
 import com.example.SecurityKotlin.requests.UserRequest
 import com.example.SecurityKotlin.responses.UserResponse
 import com.example.SecurityKotlin.services.UserService
+import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.responses.ApiResponse
+import io.swagger.v3.oas.annotations.responses.ApiResponses
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -14,6 +18,9 @@ import java.util.*
 
 @RestController
 @RequestMapping("/api/users")
+
+@Tag(name = "user", description = "Rest API for user operations")
+
 class UserController(
     private val userService: UserService
 ) {
@@ -27,6 +34,12 @@ class UserController(
         println("created user "+createdUser)
         return createdUser
     }
+    @Operation(summary = "Display all non admin users")
+    @ApiResponses(
+        value = arrayOf(
+            ApiResponse(responseCode = "200", description = "OK")
+        )
+    )
 
     @GetMapping("/")
     fun listAll(): List<UserResponse> =
@@ -57,11 +70,5 @@ class UserController(
             email = this.email,
         )
 
-    private fun UserRequest.toModel(): User =
-        User(
-            id = 0,
-            email = this.email,
-            password = this.password,
-            role = this.role
-        )
+
 }
