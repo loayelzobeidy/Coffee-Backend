@@ -1,6 +1,6 @@
 package com.example.coffee.controllers
 
-import com.example.coffee.Dtos.CoffeeDto
+import com.example.coffee.dtos.CoffeeDto
 import com.example.coffee.requests.CoffeeRequest
 import com.example.coffee.services.CoffeeService
 import org.springframework.beans.factory.annotation.Autowired

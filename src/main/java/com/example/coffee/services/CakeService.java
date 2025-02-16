@@ -1,7 +1,7 @@
 package com.example.coffee.services;
 
-import com.example.coffee.Dtos.CakeDto;
-import com.example.coffee.Dtos.CakeDtoImpl;
+import com.example.coffee.dtos.CakeDto;
+import com.example.coffee.dtos.CakeDtoImpl;
 import com.example.coffee.entities.Cake;
 import com.example.coffee.repositories.CakeRepository;
 import org.springframework.beans.factory.annotation.Autowired;

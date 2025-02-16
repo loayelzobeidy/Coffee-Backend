@@ -1,7 +1,7 @@
 package com.example.coffee.services
 
-import com.example.coffee.Dtos.CoffeeDto
-import com.example.coffee.Dtos.CoffeeDtoImpl
+import com.example.coffee.dtos.CoffeeDto
+import com.example.coffee.dtos.CoffeeDtoImpl
 import com.example.coffee.entities.Coffee
 import com.example.coffee.repositories.CoffeeRepository
 import com.example.coffee.requests.CoffeeRequest

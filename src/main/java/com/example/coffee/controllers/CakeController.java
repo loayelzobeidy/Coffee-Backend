@@ -1,6 +1,6 @@
 package com.example.coffee.controllers;
 
-import com.example.coffee.Dtos.CakeDto;
+import com.example.coffee.dtos.CakeDto;
 import com.example.coffee.services.CakeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

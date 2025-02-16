@@ -1,4 +1,4 @@
-package com.example.coffee.Dtos
+package com.example.coffee.dtos
 
 interface CoffeeDto {
     var name: String
