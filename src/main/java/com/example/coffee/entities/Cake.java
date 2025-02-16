@@ -3,6 +3,9 @@ package com.example.coffee.entities;
 import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Table(name = "cakes")
 @Entity
 public class Cake  implements MenuItem{
@@ -14,6 +17,8 @@ public class Cake  implements MenuItem{
         long price;
         String description;
         String imageUrl;
+    @ManyToMany(mappedBy = "cakes", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Order> orders = new HashSet<>();
 
     @Override
     public long getId() {
