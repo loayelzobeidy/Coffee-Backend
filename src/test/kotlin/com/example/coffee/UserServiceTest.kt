@@ -1,9 +1,8 @@
-import com.example.SecurityKotlin.entities.Role
-import com.example.SecurityKotlin.entities.User
-import com.example.SecurityKotlin.repositories.UserRepository
-import com.example.SecurityKotlin.services.UserService
+import com.example.coffee.entities.Role
+import com.example.coffee.entities.User
+import com.example.coffee.repositories.UserRepository
+import com.example.coffee.services.UserService
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.InjectMocks
 import org.mockito.Mock
