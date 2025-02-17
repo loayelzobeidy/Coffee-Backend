@@ -5,7 +5,9 @@ public interface CakeDto {
 String getName();
 String getDescription();
 String getImageUrl();
-    void setName(String name);
-   void getDescription(String description);
-    void setImageUrl(String imageUrl);
+long getPrice();
+void setName(String name);
+void setImageUrl(String imageUrl);
+void setPrice(long price);
+void setDescription(String description);
 }

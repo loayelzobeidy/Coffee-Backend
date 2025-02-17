@@ -1,5 +1,6 @@
 package com.example.coffee.dao;
 
+import com.example.coffee.entities.Cake;
 import com.example.coffee.entities.Order;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional; // Important!
 
 import java.util.List;
+import java.util.Set;
 
 @Repository
 @Transactional // Essential for EntityManager operations
@@ -21,6 +23,8 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public Order save(Order order) {
+     Set<Cake> cakes =  order.getCakes();
+       System.out.println("cakesss "+cakes.toArray()[0]);
         entityManager.persist(order);
         return order;
     }
