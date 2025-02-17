@@ -29,11 +29,12 @@ class UserServiceTest {
     fun testCreateUser() {
         val bencoer:BCryptPasswordEncoder = BCryptPasswordEncoder()
         val email = "John@gmail.com"
+        val name = "john"
         val rawPassword = "Doe"
         val encodedPassword = bencoer.encode(rawPassword)
         val role = Role.USER
 
-        val createdUser = User(1L, email, rawPassword, role)
+        val createdUser = User(1L,email,name, rawPassword, role)
 
         // Mock password encoding
         `when`(passwordEncoder.encode(rawPassword)).thenReturn(encodedPassword)

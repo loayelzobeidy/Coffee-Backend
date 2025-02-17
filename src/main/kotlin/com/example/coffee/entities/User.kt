@@ -16,7 +16,7 @@ class User(
     @Column
     val id: Long,
     @Column
-    val email: String,
+    var email: String,
     @Column
     val name: String,
     @Column

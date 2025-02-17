@@ -24,7 +24,6 @@ public class CakeController {
     }
     @PostMapping("")
     public Cake createCake(@RequestBody CakeRequest cake){
-        System.out.println("cake "+cake.name+" "+cake.description+" "+cake.price);
         return this.cakeService.createCake(cake);
     }
 }
