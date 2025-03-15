@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.web.DefaultSecurityFilterChain
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository
 
 
 @Configuration
@@ -23,10 +24,12 @@ class SecurityConfiguration(
         http: HttpSecurity,
         jwtAuthenticationFilter: JwtAuthenticationFilter
     ): DefaultSecurityFilterChain {
+//        httpSecurity
+            // ...
+
         http
             .cors{}
             .csrf { it.disable() }
-//            .csrf().ignoringRequestMatchers("/api/auth/register/").and()
             .authorizeHttpRequests {
                 it
                     .requestMatchers("/api/auth", "/swagger-ui/index.html","/api/auth/register/","/swagger-ui/*","api/auth/refresh", "/error")
