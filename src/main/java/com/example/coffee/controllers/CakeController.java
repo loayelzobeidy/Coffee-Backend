@@ -24,8 +24,6 @@ import java.util.List;
 public class CakeController {
     private CakeService cakeService;
     @Autowired
-    private CakeRepository cakeRepository;
-    @Autowired
     public CakeController(CakeService cakeService){
         this.cakeService = cakeService;
     }
@@ -42,7 +40,7 @@ public class CakeController {
             pageRequest = PageRequest.of(request.getPage(), request.getSize());
         }
 
-        Page<Cake> cakes = cakeRepository.findAll(spec, pageRequest);
+        Page<Cake> cakes = cakeService.getCakesFiltered(spec, pageRequest);
         return ResponseEntity.ok(cakes);
     }
     @PostMapping("")

@@ -6,6 +6,9 @@ import com.example.coffee.entities.Cake;
 import com.example.coffee.repositories.CakeRepository;
 import com.example.coffee.requests.CakeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,6 +33,10 @@ public class CakeService {
                 cake.setImageUrl(cakereceived.imageUrl);
 
                return  this.cakeRepository.save(cake);
+            }
+            public Page<Cake>getCakesFiltered(Specification<Cake> spec, PageRequest pageRequest){
+                Page<Cake> cakes = cakeRepository.findAll(spec, pageRequest);
+                return cakes;
             }
     public CakeDto convertEntityToDto(Cake cake){
          CakeDtoImpl cakeDtoImpl = new CakeDtoImpl();
