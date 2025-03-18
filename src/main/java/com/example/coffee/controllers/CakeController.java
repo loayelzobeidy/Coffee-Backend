@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("/api/v1/cakes")
 public class CakeController {
     private CakeService cakeService;
-    @Autowired
+
     public CakeController(CakeService cakeService){
         this.cakeService = cakeService;
     }
